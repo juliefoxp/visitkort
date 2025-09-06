@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
@@ -19,9 +19,41 @@
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
+}
+h1,
+h2,
+button {
+  font-family: jomhuria;
+}
+h3,
+p,
+li {
+  font-family: empunda sans;
+}
+:root {
+  --color-primary: #eae7df; /* beige til baggrund */
+  --color-secondary-rosa: #a2788c; /* rosa til knapper */
+  --color-secondary-rosa-hover: #7b626e; /* hover-farve til knapper */
+  --color-secondary-brown: #736767; /* brun farve til sektioner */
+}
+
+.primary {
+  background-color: var(--color-primary);
+}
+
+.secondary-brown {
+  background-color: var(--color-secondary-brown);
+}
+
+.secondary-rosa {
+  background-color: var(--color-secondary-rosa);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.secondary-rosa:hover {
+  background-color: var(--color-secondary-rosa-hover);
 }

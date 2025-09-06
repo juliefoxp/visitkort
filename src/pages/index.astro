@@ -4,12 +4,80 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
+import { text } from "motion/react-client";
+import Text from "../components/Text.astro";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+<MainLayout title="Visitkort">
+<article
+  class="secondary-brown text-white relative overflow-hidden p-6
+         flex flex-col items-center justify-center gap-6
+         md:flex-row md:items-center md:justify-start md:p-10 md:gap-10 md:px-8
+         lg:p-12 lg:gap-12 lg:px-12
+         xl:p-16 xl:gap-16 xl:px-16"
+  style="background-image: url('/background_img_1.png'); background-repeat: no-repeat; background-position: center; background-size: contain;"
+>
+
+  <div class="flex-1 text-center md:text-left relative z-30 -top-0 md:-top-24 lg:-top-26 xl:-top-28 px-4 md:px-0">
+    <h1 class="text-6xl font-bold tracking-wider md:text-7xl lg:text-8xl xl:text-9xl">MULTIMEDIADESIGN</h1>
+    <h1 class="text-6xl font-bold tracking-wider md:text-7xl lg:text-8xl xl:text-9xl">STUDENT</h1>
+<h2 class="text-3xl mt-2 md:text-4xl lg:text-4xl xl:text-5xl">JULIE FOX E. PETERSEN</h2>
+
+  </div>
+  <img
+    class="w-3xs max-w-full rounded-t-[250px] z-20 object-contain
+           mb-6
+           md:mb-0 md:w-80 lg:w-96 xl:w-[32rem] md:rounded-t-[280px] lg:rounded-t-[320px] xl:rounded-t-[400px]"
+    src="billede_1.webp"
+    alt="billed 1"
+  />
+  <a href="#section2" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-50">
+    <svg class="w-8 h-8 animate-bounce text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  </a>
+</article>
+
+<section id="section2">
+  <h1 class="text-6xl text-center md:text-8xl">ABOUT ME</h1>
+
+  <div class="flex flex-col space-y-8 max-w-md mx-auto md:max-w-xl">
+    <img
+      class="w-96 h-64 secondary-brown rounded-full object-contain ml-auto mr-[-4rem] md:w-[32rem] md:h-[22rem] md:mr-[-6rem]"
+      src="billede_2.png"
+      alt="billed 2"/>
+    <div
+      class="secondary-brown rounded-full w-100 h-70 p-6 text-white flex flex-col justify-center text-center mr-auto ml-[-4rem] md:w-[32rem] md:h-[22rem] md:p-10 md:ml-[-6rem]">
+      <h2 class="font-semibold text-4xl mb-2 md:text-6xl">INFO:</h2>
+      <Text class="md:text-lg">Education: Multimediadesign (Erhvervsakademi København)</Text>
+      <Text class="md:text-lg">Work: & Other Stories (Frederiksberg centret)</Text>
+      <Text class="md:text-lg">Skills: Graphic design, content creation, Ux/Ui</Text>
+    </div>
+
+    <div
+      class="secondary-brown rounded-full w-96 h-64 p-8 text-white text-center overflow-hidden ml-auto mr-[-4rem] md:w-[32rem] md:h-[22rem] md:p-10 md:mr-[-6rem]" >
+      <h2 class="text-4xl font-semibold mb-2 md:text-6xl">SUMMARY:</h2>
+      <Text class="md:text-lg">
+        My name is Julie Fox Petersen, I am 23 years old and based in Copenhagen. I am currently studying Multimedia Design at EK while working part-time at & Other Stories. I am passionate about graphic design, fashion, interior design and traveling.
+      </Text>
+    </div>
+  </div>
+</section>
+<section class="grid place-items-center p-10">
+  <a href="/cv">
+    <Button class="px-6 py-3 text-lg md:px-8 md:py-4 md:text-xl">SEE MY CV</Button>
+  </a>
+</section>
+
+
+	<div class=" flex overflow-x-auto space-x-4 p-4 secondary-brown mb-8">
+		<img src="scroll_1.webp" alt="scroll billede 1" class="h-70 w-55">
+		<img src="scroll_2.webp" alt="scroll billede 2" class="h-70 w-55">
+		<img src="scroll_3.webp" alt="scroll billede 3" class="h-70 w-55">
+		<img src="scroll_4.webp" alt="scroll billede 4" class="h-70 w-55">
+		<img src="scroll_5.webp" alt="scroll billede 5" class="h-70 w-55">
+		<img src="scroll_6.webp" alt="scroll billede 6" class="h-70 w-55">
+		<img src="scroll_7.webp" alt="scroll billede 7" class="h-70 w-55">
+	</div>
+	</section>
+	
 </MainLayout>
